@@ -6,6 +6,10 @@
            review="android-review.googlesource.com"
            revision="refs/tags/android-6.0.1_r22" />
 
+  <remote name="suda"
+          fetch="https://github.com"
+          review=".." />         
+
   <remote  name="github"
            fetch=".."
            review="review.cyanogenmod.org" />
@@ -25,7 +29,7 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <project path="android" name="temasek/android" remote="github" revision="cm-13.0" />
+  <project path="android" name="HDragon8/android" remote="github" revision="cm-13.0" />
 
   <project path="art" name="temasek/android_art" remote="github" revision="cm-13.0" />
   <project path="bionic" name="temasek/android_bionic" remote="github" revision="cm-13.0" />
@@ -49,10 +53,10 @@
   <project path="libcore" name="temasek/android_libcore" remote="github" revision="cm-13.0" />
   <project path="packages/apps/Bluetooth" name="temasek/android_packages_apps_Bluetooth" remote="github" revision="cm-13.0" />
   <project path="packages/apps/BluetoothExt" name="temasek/android_packages_apps_BluetoothExt" remote="github" revision="cm-13.0" />
-  <project path="packages/apps/Contacts" name="temasek/android_packages_apps_Contacts" remote="github" revision="cm-13.0" />
-  <project path="packages/apps/ContactsCommon" name="temasek/android_packages_apps_ContactsCommon" remote="github" revision="cm-13.0" />
+  <!--<project path="packages/apps/Contacts" name="temasek/android_packages_apps_Contacts" remote="github" revision="cm-13.0" />-->
+  <!--<project path="packages/apps/ContactsCommon" name="temasek/android_packages_apps_ContactsCommon" remote="github" revision="cm-13.0" />-->
   <project path="packages/apps/DeskClock" name="temasek/android_packages_apps_DeskClock" remote="github" revision="cm-13.0" />
-  <project path="packages/apps/Dialer" name="temasek/android_packages_apps_Dialer" remote="github" revision="cm-13.0" />
+  <!--<project path="packages/apps/Dialer" name="temasek/android_packages_apps_Dialer" remote="github" revision="cm-13.0" />-->
   <project path="packages/apps/InCallUI" name="temasek/android_packages_apps_InCallUI" remote="github" revision="cm-13.0" />
   <project path="packages/apps/OmniSwitch" name="temasek/android_packages_apps_OmniSwitch" remote="github" revision="cm-13.0" />
   <project path="packages/apps/OTAUpdates" name="temasek/OTAUpdates" revision="aosp" />
@@ -62,7 +66,7 @@
   <project path="packages/providers/ContactsProvider" name="temasek/android_packages_providers_ContactsProvider" remote="github" revision="cm-13.0" />
   <project path="packages/providers/MediaProvider" name="temasek/android_packages_providers_MediaProvider" remote="github" revision="cm-13.0" />
   <project path="packages/providers/TelephonyProvider" name="temasek/android_packages_providers_TelephonyProvider" remote="github" revision="cm-13.0" />
-  <project path="packages/services/Telecomm" name="temasek/android_packages_services_Telecomm" remote="github" revision="cm-13.0" />
+  <!--<project path="packages/services/Telecomm" name="temasek/android_packages_services_Telecomm" remote="github" revision="cm-13.0" />-->
   <project path="packages/services/Telephony" name="temasek/android_packages_services_Telephony" remote="github" revision="cm-13.0" />
   <project path="system/bt" name="temasek/android_system_bt" remote="github" revision="cm-13.0" />
   <project path="system/core" name="temasek/android_system_core" remote="github" revision="cm-13.0" />
@@ -70,6 +74,35 @@
   <project path="vendor/cm" name="temasek/android_vendor_cm" remote="github" revision="cm-13.0" />
   <project path="vendor/cmsdk" name="temasek/cm_platform_sdk" remote="github" revision="cm-13.0" />
 <!-- END of temasek -->
+
+<!-- BEGIN SUDAMOD -->
+  <project path="external/suda/SudaSDKs" remote="suda" revision="sm-2.0" name="SudaMod/android_external_suda_SudaSDKs" />
+  <!--<project path="frameworks/base" remote="suda" revision="sm-2.0" name="SudaMod/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" />-->
+  <!--<project path="packages/apps/Browser" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_Browser" groups="pdk-fs" />--> 
+  <project path="packages/apps/Calendar" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_Calendar" groups="pdk-fs" />  
+  <!--<project path="packages/apps/CellBroadcastReceiver" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_CellBroadcastReceiver" groups="pdk-fs" />-->
+  <project path="packages/apps/Contacts" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_Contacts" groups="pdk-fs" />
+  <project path="packages/apps/ContactsCommon" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_ContactsCommon" groups="pdk-fs" />
+  <project path="packages/apps/CMFileManager" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_CMFileManager" />
+  <!--<project path="packages/apps/DeskClock" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_DeskClock" groups="pdk-fs" />-->  
+  <project path="packages/apps/Dialer" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_Dialer" groups="pdk-fs" />
+  <!--<project path="packages/apps/Eleven" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_Eleven" />-->
+  <!--<project path="packages/apps/InCallUI" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_InCallUI" groups="pdk-fs" />-->
+  <!--<project path="packages/apps/LockClock" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_LockClock" />-->
+  <!--<project path="packages/apps/Messaging" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_Messaging" groups="pdk-fs" />-->
+  <!--<project path="packages/apps/Settings" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_Settings" groups="pdk-fs" />-->
+  <!--<project path="packages/apps/Stk" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_Stk" groups="apps_stk,pdk-fs" />-->  
+  <!-- <project path="packages/apps/SudaLauncher" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_SudaLauncher" /> -->
+  <project path="packages/providers/PhoneLocationProvider" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_provider_PhoneLocationProvider" /> 
+  <project path="packages/services/Telecomm" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" />  
+  <!--<project path="packages/services/Telephony" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" />-->
+  <!--<project path="system/core" remote="suda" revision="sm-2.0" name="SudaMod/android_system_core" groups="pdk" />--> 
+  <!--<project path="system/extras/su" remote="suda" revision="sm-2.0" name="SudaMod/android_system_extras_su" />-->   
+  <!--<project path="vendor/sm" remote="suda" revision="sm-2.0" name="SudaMod/android_vendor_sm" />-->
+  <!--<project path="vendor/cmsdk" name="SudaMod/cm_platform_sdk" />-->
+  <!--<project path="external/sepolicy" name="SudaMod/android_external_sepolicy" groups="pdk" remote="suda" revision="cm-13.0" />-->
+  <!--<project path="device/qcom/sepolicy" name="SudaMod/android_device_qcom_sepolicy" remote="suda" revision="sm-2.0" />-->
+<!-- END SUDAMOD -->
 
 <!-- BEGIN CYANOGENMOD -->
   <project path="abi/cpp" name="CyanogenMod/android_abi_cpp" groups="pdk" />
@@ -272,13 +305,13 @@
   <!--<project path="packages/apps/Bluetooth" name="CyanogenMod/android_packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" />-->
   <!--<project path="packages/apps/BluetoothExt" name="CyanogenMod/android_packages_apps_BluetoothExt" />-->
   <project path="packages/apps/Browser" name="CyanogenMod/android_packages_apps_Browser" groups="pdk-fs" />
-  <project path="packages/apps/Calendar" name="CyanogenMod/android_packages_apps_Calendar" groups="pdk-fs" />
+  <!--<project path="packages/apps/Calendar" name="CyanogenMod/android_packages_apps_Calendar" groups="pdk-fs" />-->
   <project path="packages/apps/Camera2" name="CyanogenMod/android_packages_apps_Camera2" groups="pdk-fs" />
   <project path="packages/apps/CarrierConfig" name="CyanogenMod/android_packages_apps_CarrierConfig" groups="pdk-fs" />
   <project path="packages/apps/CellBroadcastReceiver" name="CyanogenMod/android_packages_apps_CellBroadcastReceiver" groups="pdk-fs" />
   <project path="packages/apps/CertInstaller" name="CyanogenMod/android_packages_apps_CertInstaller" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/CMBugReport" name="CyanogenMod/android_packages_apps_CMBugreport" />
-  <project path="packages/apps/CMFileManager" name="CyanogenMod/android_packages_apps_CMFileManager" />
+  <!--<project path="packages/apps/CMFileManager" name="CyanogenMod/android_packages_apps_CMFileManager" />-->
   <!--<project path="packages/apps/CMUpdater" name="CyanogenMod/android_packages_apps_CMUpdater" />-->
   <project path="packages/apps/CMWallpapers" name="CyanogenMod/android_packages_apps_CMWallpapers" />
   <!--<project path="packages/apps/Contacts" name="CyanogenMod/android_packages_apps_Contacts" groups="pdk-fs" />-->
